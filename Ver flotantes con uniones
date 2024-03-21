@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+typedef union{
+    float f_numero;
+    unsigned char f_array[4];
+
+}union_t;
+
+void main(){
+    union_t numero;
+    numero.f_numero = 130;
+    for (char i=3; i>=0; i--){
+      printf("%x",numero.f_array[i]);
+    }
+}
