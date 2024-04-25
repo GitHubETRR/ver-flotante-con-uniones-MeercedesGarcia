@@ -1,1 +1,12 @@
+#include <stdio.h>
 
+void main(){
+    float f_numero = 2;    //defino el valor de la variable "f_numero", la cual quiero segmentar
+    char *puntero = &f_numero; 
+    puntero += 0x03;
+
+    for (char i=1; i<=4; i++){
+        printf("%u° byte:%x\n", i, *puntero); //
+        *(puntero--);
+ }
+}
