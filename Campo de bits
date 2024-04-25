@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+union{
+    float valor;
+    unsigned char bytes[4]; // cant de bytes que quiero ver
+}var;
+
+void main(){
+    var.valor= 293; // le doy un valor a la variable "valor"
+    printf("Byte 1= %x\n",var.bytes[0]);
+    printf("Byte 2= %x\n",var.bytes[1]);
+    printf("Byte 3= %x\n",var.bytes[2]);
+    printf("Byte 4= %x\n",var.bytes[3]);
+
+}
